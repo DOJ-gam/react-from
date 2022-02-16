@@ -1,13 +1,10 @@
 import React, { useState } from "react";
-
 import "./App.css";
-
 function App() {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [email, setEmail] = useState("");
-
   return (
     <div className="App">
       <h1>React and CSS Form with Validation</h1>
@@ -49,13 +46,10 @@ function App() {
     </div>
   );
 }
-
 export default App;
-
 const Input = ({ placeholder, type, setValue, value, label }) => {
   const [error, setError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
-
   const onChange = (e) => {
     setValue(e.target.value);
     validateError(e.target.value);
@@ -83,7 +77,6 @@ const Input = ({ placeholder, type, setValue, value, label }) => {
     </div>
   );
 };
-
 const FormContainer = (props) => (
   <div className="form-container">
     <h1 className="form-title">{props.title}</h1>
